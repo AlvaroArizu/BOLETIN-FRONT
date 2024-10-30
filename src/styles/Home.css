@@ -1,3 +1,53 @@
+/* Ajustes responsive */
+@media (max-width: 768px) {
+    /* Estilo del título */
+    .header-boletin h1 {
+        font-size: 2.4rem; /* Ajusta el tamaño del título en móviles */
+    }
+
+    .header-boletin p.lead {
+        font-size: 1.2rem; /* Ajusta el tamaño del subtítulo en móviles */
+    }
+
+    /* Estilo del encabezado de Noticias Destacadas */
+    .noticias-destacadas-heading {
+        font-size: 1.8rem; /* Ajusta el tamaño del encabezado de noticias en móviles */
+    }
+
+    /* Ajustes para el video de fondo */
+    #bg-video {
+        height: 40vh; /* Reduce la altura del video en móviles */
+        opacity: 0.5; /* Mayor transparencia en móviles para legibilidad */
+    }
+
+    /* Ajustes para el contenedor de búsqueda */
+    #searchForm .form-control {
+        width: 100%; /* Asegura que el campo de búsqueda ocupe todo el ancho */
+        margin-bottom: 10px; /* Espaciado entre campos */
+    }
+
+    #searchForm .btn-lg {
+        width: 100%; /* Botón ocupa todo el ancho */
+    }
+
+    /* Ajustes para el contenido superpuesto */
+    .overlay-content {
+        padding: 10px; /* Reduce el padding en móviles */
+        max-width: 95%; /* Permite un poco más de ancho en móviles */
+    }
+
+    /* Estilo del contenido superpuesto */
+    .overlay-content h1 {
+        font-size: 2rem; /* Ajusta el tamaño del título superpuesto en móviles */
+    }
+
+    .overlay-content p.lead {
+        font-size: 1rem; /* Ajusta el tamaño del subtítulo superpuesto en móviles */
+    }
+}
+
+
+
 /* Estilos para la cabecera */
 .header-boletin {
     background: linear-gradient(135deg, #11597d 0%, #34495e 100%);
@@ -135,7 +185,7 @@
 
 /* Estilo del título */
 .overlay-content h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
     letter-spacing: 1px;
