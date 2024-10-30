@@ -13,7 +13,8 @@ const NoticiasPublic = () => {
   useEffect(() => {
     const fetchNoticias = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_API_URL}/noticias`);
+        // Cargar las noticias desde el archivo JSON
+        const response = await axios.get('/data/data.json'); 
         
         // Ordenar las noticias por fechaPublicacion en orden descendente
         const noticiasOrdenadas = response.data.sort((a, b) => new Date(b.fechaPublicacion) - new Date(a.fechaPublicacion));
@@ -76,7 +77,7 @@ const NoticiasPublic = () => {
                 <div className="card noticia-card h-100">
                   {noticia.imagen && (
                     <img
-                      src={`${process.env.REACT_APP_API_URL.replace('/api', '')}${noticia.imagen}`}
+                      src={noticia.imagen} // Suponiendo que la imagen está en la misma ruta que el JSON
                       className="card-img-top img-fluid noticia-imagen"
                       alt="Imagen de la noticia"
                     />
@@ -129,6 +130,7 @@ const NoticiasPublic = () => {
 };
 
 export default NoticiasPublic;
+
 
 
 

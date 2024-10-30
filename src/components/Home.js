@@ -12,7 +12,8 @@ const Home = () => {
   useEffect(() => {
     const fetchDestacadas = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_API_URL}/noticias/noticias-destacadas`);
+        // Cambia esta línea para cargar el JSON desde la carpeta public
+        const response = await axios.get('/data/data.json'); 
 
         // Ordenar las noticias por fechaPublicacion en orden descendente
         const noticiasOrdenadas = response.data.sort((a, b) => new Date(b.fechaPublicacion) - new Date(a.fechaPublicacion));
@@ -56,7 +57,6 @@ const Home = () => {
         </div>
       </div>
 
-
       {/* Sección de noticias destacadas */}
       <div className="container1 mt-5">
         <h2 className="noticias-destacadas-heading">Noticias Destacadas</h2>
@@ -68,7 +68,7 @@ const Home = () => {
                   {/* Lado Frontal de la tarjeta */}
                   <div className="flip-card-front">
                     <img
-                      src={`${process.env.REACT_APP_API_URL.replace('/api', '')}${noticia.imagen}`}
+                      src={noticia.imagen} // Suponiendo que la imagen está en la misma ruta que el JSON
                       alt="Imagen de la noticia"
                       className="card-img-top img-fluid flip-img"
                     />
@@ -122,12 +122,13 @@ const Home = () => {
         </Link>
       </div>
 
-      <br></br>
+      <br />
     </div>
   );
 };
 
 export default Home;
+
 
 
 
