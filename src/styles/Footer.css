@@ -1,0 +1,104 @@
+/* General footer styles */
+.footer {
+    background: linear-gradient(135deg, #4b79a1, #283e51);
+    color: white;
+    padding: 24px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer .row {
+    align-items: center;
+}
+
+/* Logos alineados a la izquierda */
+.footer .col-md-4 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer .col-md-8 {
+    display: flex;
+    justify-content: flex-end;  /* Alinea los íconos a la derecha */
+    align-items: center;
+}
+.footer .logo-icon-footer {
+    max-width: 100px;  /* Tamaño ajustado */
+    height: auto;
+    margin-right: 10px; /* Espaciado entre logos */
+    transition: transform 0.3s ease; /* Animación de hover */
+}
+
+.footer .logo-icon-footer:hover {
+    transform: scale(1.05); /* Efecto zoom */
+}
+
+/* Íconos sociales */
+.footer ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer ul .list-inline-item a {
+    color: white;
+    font-size: 2rem;  /* Tamaño de los íconos */
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Animación de hover */
+}
+
+.footer ul .list-inline-item a:hover {
+    color: #1abc9c;  /* Color verde al pasar el cursor */
+    transform: translateY(-5px); /* Efecto de hover */
+}
+
+/* Centrar íconos sociales */
+.footer .social-list {
+    display: flex;
+    justify-content: center;
+}
+
+.footer .social-list li {
+    margin: 0 10px;
+}
+
+/* Parte inferior del footer */
+.footer-bottom {
+    text-align: center;
+    font-size: 1rem;
+    padding: 12px 0;
+    background: linear-gradient(135deg, #4b79a1, #283e51);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 30px;
+}
+
+.footer-bottom small {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.footer-bottom small:hover {
+    color: white;
+    transition: 0.3s;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+    .footer .logo-icon-footer {
+        max-width: 80px;  /* Reducir tamaño de los logos en móviles */
+    }
+
+    .footer ul .list-inline-item a {
+        font-size: 1.6rem; /* Reducir tamaño de los íconos en móviles */
+    }
+
+    .footer-bottom small {
+        font-size: 0.8rem;
+    }
+}

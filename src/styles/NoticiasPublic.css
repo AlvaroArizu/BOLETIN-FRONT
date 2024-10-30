@@ -1,0 +1,122 @@
+/* Estilos generales */
+.noticia-card {
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+/* Estilo del encabezado de Últimas Noticias */
+.ultimas-noticias-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase; /* Mayúsculas */
+  letter-spacing: 3px;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+ /* Gradiente atractivo */
+  -webkit-background-clip: text;
+  color: transparent;
+  padding-bottom: 10px;
+}
+
+.ultimas-noticias-heading::before,
+.ultimas-noticias-heading::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  background-color:#00d2ff; /* Color más brillante para las líneas */
+  bottom: 0;
+  width: 100px;
+  transition: width 0.3s ease-in-out;
+}
+
+.ultimas-noticias-heading::before {
+  left: 0;
+}
+
+.ultimas-noticias-heading::after {
+  right: 0;
+}
+
+.ultimas-noticias-heading:hover::before,
+.ultimas-noticias-heading:hover::after {
+  width: 140px; /* Expansión al pasar el ratón */
+}
+
+/* Agregar sombra al texto */
+.ultimas-noticias-heading::selection {
+  color: #ff7e5f;
+  background: #fef9e7;
+}
+
+
+.noticia-card:hover {
+  transform: translateY(-5px); /* Efecto de elevación al hacer hover */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Sombra más profunda */
+}
+
+.noticia-imagen {
+  height: 200px; /* Tamaño fijo para todas las imágenes */
+  object-fit: cover; /* Recorta la imagen sin deformarla */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Separador visual */
+  transition: transform 0.5s ease;
+}
+
+.noticia-card:hover .noticia-imagen {
+  transform: scale(1.05); /* Zoom suave en la imagen */
+}
+
+.card-title {
+  font-weight: bold;
+  color: #333;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+.text-muted {
+  color: #888 !important;
+}
+
+/* Botón "Ver más" */
+.btn-vermas {
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+  color: white;
+  font-size: 1rem;
+  padding: 7px 15px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-vermas:hover {
+  background: linear-gradient(135deg, #00c6ff, #7efff5);
+  color: #333;
+}
+
+/* Estilos para la paginación */
+.pag-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 30px;
+  background-color: #4b79a1;
+  color: white;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pag-btn:hover {
+  background-color: #ffdd57;
+  color: #333;
+}
+
+.pag-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+  

@@ -1,0 +1,34 @@
+.logo-icon-small {
+    width: 60px;   /* Ancho del logo */
+    height: auto;  /* Mantiene las proporciones */
+    margin-left: 8px;  /* Margen a la izquierda */
+}
+
+
+
+/* AdminPanel.css */
+.admin-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #283e51;
+  background: linear-gradient(135deg, #ffdd57, #4b79a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.admin-title::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background-color: #ffdd57;
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  border-radius: 4px;
+}

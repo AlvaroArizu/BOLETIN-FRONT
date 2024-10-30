@@ -1,0 +1,238 @@
+/* Estilos para la cabecera */
+.header-boletin {
+    background: linear-gradient(135deg, #11597d 0%, #34495e 100%);
+    color: white;
+
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.header-boletin h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+}
+
+.header-boletin p.lead {
+    font-size: 1.4rem;
+    margin: 0;
+    color: #d1d8e0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+
+
+.logo-icon-small {
+    width: 60px;
+    height: auto;
+    margin-left: 25px;
+}
+
+/* Estilo para el formulario de búsqueda */
+#searchForm .form-control {
+    max-width: 400px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#searchForm .form-control::placeholder {
+    color: #d1d8e0;
+}
+
+#searchForm .form-control:focus {
+    border-color: rgba(255, 255, 255, 0.9);
+    outline: none;
+}
+
+#searchForm .btn-outline-light {
+    border: 2px solid #d1d8e0;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#searchForm .btn-outline-light:hover {
+    background-color: #d1d8e0;
+    color: #11597d;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+    .header-boletin h1 {
+        font-size: 2.4rem;
+    }
+
+    .header-boletin p.lead {
+        font-size: 1.2rem;
+    }
+
+    #searchForm .form-control {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #searchForm .btn-lg {
+        width: 100%;
+    }
+}
+
+/* Ajustes para el video de fondo ocupando todo el espacio */
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;  /* Video cubre todo el viewport */
+    object-fit: cover;  /* El video se ajusta sin distorsión */
+    z-index: -1;
+    opacity: 0.7;  /* Transparencia para que el contenido sea legible */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;  /* Transición suave */
+    filter: brightness(0.9) contrast(1.1);  /* Ajuste de brillo y contraste */
+    will-change: opacity, transform;  /* Mejora del rendimiento */
+}
+
+/* Asegurar que el contenido superpuesto se vea correctamente */
+.header-content {
+    position: relative;
+    height: 100vh;  /* Ocupa todo el alto del viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    z-index: 1;  /* Asegura que el contenido esté sobre el video */
+}
+
+/* Mejora de rendimiento y apariencia en dispositivos móviles */
+@media (max-width: 768px) {
+    #bg-video {
+        object-fit: cover;  /* Mantiene la cobertura del video en móviles */
+        opacity: 0.5;  /* Mayor transparencia en móviles para legibilidad */
+    }
+}
+
+
+/* Estilo para el contenido superpuesto */
+.overlay-content {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo del título */
+.overlay-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilo del subtítulo */
+.overlay-content p.lead {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    color: #d1d8e0;
+}
+
+/* Estilo para el campo de búsqueda */
+/* Campo de búsqueda con un esquema elegante de tonos de azul */
+#searchForm .form-control.search-input {
+    width: 400px;
+    border: 2px solid rgba(173, 216, 230, 0.9) !important;  /* Borde azul claro (celeste) */
+    background-color: rgba(17, 89, 125, 0.8) !important;  /* Fondo azul oscuro */
+    color: white !important;  /* Texto en blanco */
+    border-radius: 50px !important;
+    padding: 15px 20px;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+#searchForm .form-control.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;  /* Placeholder en blanco claro */
+}
+
+#searchForm .form-control.search-input:focus {
+    border-color: rgba(173, 216, 230, 1) !important;  /* Borde azul claro más intenso */
+    background-color: rgba(17, 89, 125, 0.9) !important;  /* Fondo ligeramente más oscuro al enfocar */
+    outline: none !important;
+}
+
+/* Botón de búsqueda elegante */
+#searchForm .btn-custom-search {
+    background-color: transparent !important;  /* Fondo transparente para un estilo más fino */
+    color: rgba(173, 216, 230, 1) !important;  /* Texto azul claro */
+    border: 1px solid rgba(173, 216, 230, 1) !important;  /* Borde azul claro más fino */
+    border-radius: 50px !important;  /* Bordes redondeados */
+    padding: 10px 20px;  /* Menor padding para hacerlo más delgado */
+    font-size: 1rem !important;  /* Fuente más pequeña y elegante */
+    font-weight: 300;  /* Fuente más ligera */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+#searchForm .btn-custom-search:hover {
+    background-color: rgba(173, 216, 230, 1) !important;  /* Fondo azul claro al hacer hover */
+    color: #11597d !important;  /* Texto azul oscuro al hacer hover */
+    border-color: rgba(255, 255, 255, 1) !important;  /* Borde blanco al hacer hover */
+}
+
+
+
+/* Estilo del encabezado de Noticias Destacadas */
+.noticias-destacadas-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #283e51;
+    text-transform: uppercase; /* Mayúsculas para darle más importancia */
+    letter-spacing: 2px; /* Espaciado entre letras para un efecto más refinado */
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    background: linear-gradient(135deg, #00d2ff, #3a7bd5);/* Gradiente atractivo */
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .noticias-destacadas-heading::before,
+  .noticias-destacadas-heading::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    background-color: #00d2ff;
+    top: 100%;
+    width: 100px;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  .noticias-destacadas-heading::before {
+    left: 0;
+  }
+  
+  .noticias-destacadas-heading::after {
+    right: 0;
+  }
+  
+  .noticias-destacadas-heading:hover::before,
+  .noticias-destacadas-heading:hover::after {
+    width: 150px; /* Aumenta la longitud de las líneas al pasar el ratón */
+  }
+
+
+  
+  

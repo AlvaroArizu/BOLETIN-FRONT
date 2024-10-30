@@ -1,0 +1,86 @@
+/* Estilo para el contenedor de la noticia */
+.noticia-description-card {
+    background-color: #f7f9fc;
+    border-radius: 20px; /* Bordes más redondeados */
+    padding: 40px; /* Espacio interior más amplio */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Sombra más suave y profunda */
+  }
+  
+  /* Título de la noticia con gradiente */
+  .noticia-title {
+    font-size: 2.8rem; /* Título más grande */
+    font-weight: bold;
+    text-align: center;
+    color: #283e51;
+    background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  /* Subrayado decorativo debajo del título */
+  .noticia-title::after {
+    content: "";
+    display: block;
+    width: 80px; /* Línea más larga */
+    height: 5px;
+    background-color: #4b79a1;
+    margin: 0 auto;
+    margin-top: 15px;
+    border-radius: 3px; /* Borde redondeado para la línea */
+  }
+  
+  /* Fecha de la noticia */
+  .noticia-fecha {
+    font-size: 1.3rem; /* Tamaño de fuente un poco más grande */
+    color: #666; /* Color gris más oscuro */
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  /* Imagen de la noticia */
+  .noticia-img {
+    max-height: 450px; /* Imagen ligeramente más grande */
+    object-fit: cover;
+    border-radius: 15px; /* Bordes más redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Sombra suave */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil para la imagen */
+  }
+  
+  .noticia-img:hover {
+    transform: scale(1.08); /* Zoom más pronunciado */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Sombra más fuerte al hacer hover */
+  }
+  
+  /* Descripción de la noticia */
+  .noticia-descripcion {
+    font-size: 1.3rem; /* Texto ligeramente más grande */
+    line-height: 1.8;
+    color: #444; /* Color más oscuro para facilitar la lectura */
+    text-align: justify;
+    padding: 30px; /* Más espacio interior para el texto */
+    background-color: #ffffff; /* Fondo blanco para mayor claridad */
+    border-radius: 10px; /* Bordes suaves */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.05); /* Sombra ligera */
+  }
+  
+  /* Botón "Volver" personalizado */
+  .btn-custom-volver {
+    background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+    color: #fff;
+    padding: 12px 35px; /* Botón más grande */
+    font-size: 1.2rem;
+    border-radius: 50px; /* Bordes más redondeados */
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Sombra para el botón */
+  }
+  
+  .btn-custom-volver:hover {
+    background: linear-gradient(135deg, #00c6ff, #7efff5);
+    color: #283e51;
+    transform: scale(1.1); /* Zoom más pronunciado en hover */
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al hacer hover */
+  }
+  

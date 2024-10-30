@@ -1,0 +1,243 @@
+/* FlipCards.css */
+.container1 {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 350px;
+    perspective: 1600px; /* Aumenta la profundidad del efecto 3D */
+    margin-bottom: 20px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transición más fluida */
+    transform-style: preserve-3d;
+    cursor: pointer;
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    border-radius: 12px; /* Bordes redondeados más suaves */
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+}
+
+.flip-card-front {
+    background-color: #f8f9fa;
+    color: #333;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15); /* Sombra suave */
+    overflow: hidden;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0; /* Bordes redondeados solo en la parte superior */
+    margin-bottom: 15px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.flip-card:hover .flip-card-front img {
+    transform: scale(1.08); /* Zoom suave al pasar el cursor */
+    opacity: 0.9; /* Sutil desvanecimiento */
+}
+
+.flip-card-front h5 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #444;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.flip-card-front p {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Estilo de la parte trasera */
+.flip-card-back {
+    background: linear-gradient(135deg, #4b79a1, #283e51); /* Gradiente sobrio con tonos azul oscuro y verde grisáceo */
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.2); /* Sombra interna suave */
+    transition: all 0.3s ease;
+  }
+  
+  .flip-card-back h5 {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra de texto para darle mayor contraste */
+  }
+  
+  .flip-card-back p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .flip-card-back .btn {
+    margin-top: auto;
+    background: linear-gradient(135deg, #00c6ff, #7efff5);
+ /* Botón amarillo para contraste */
+    color: #333;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .flip-card-back .btn:hover {
+    background: linear-gradient(135deg, #00d2ff, #3a7bd5);/* Color más oscuro en hover */
+    color: #222;
+  }
+  
+
+/* Paginación */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1rem;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268; /* Oscurecer el botón al pasar el cursor */
+}
+
+.btn-secondary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+  
+
+/* Botón para ver todas las noticias - diseño mejorado */
+.btn-gradient {
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5); /* Gradiente en tonos azul oscuro */
+    color: white;
+    font-size: 1.3rem; /* Tamaño de fuente aumentado */
+    padding: 10px 30px; /* Más padding para un botón grande y destacable */
+    border-radius: 50px; /* Bordes más redondeados */
+    border: none; /* Sin borde */
+    transition: all 0.4s ease; /* Transición suave para todos los cambios */
+    display: inline-block; /* Mantiene el comportamiento de bloque en línea */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra suave para dar sensación de profundidad */
+  }
+  
+  .btn-gradient:hover {
+    background: linear-gradient(135deg, #00c6ff, #7efff5);
+ /* Cambia a un gradiente amarillo suave */
+    color: #333; /* Texto oscuro al hacer hover */
+    transform: scale(1.1); /* Efecto de zoom */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al hacer hover */
+  }
+  
+  .btn-gradient:focus {
+    outline: none; /* Eliminar el contorno predeterminado */
+  }
+  
+  /* Ajustes para dispositivos móviles */
+  @media (max-width: 768px) {
+    .btn-gradient {
+      font-size: 1.1rem;
+      padding: 12px 25px; /* Ajustes de padding y fuente para pantallas pequeñas */
+    }
+  }
+
+  
+  
+  /* Estilo del buscador */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 450px;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  border-radius: 50px; /* Bordes redondeados */
+  border: 2px solid #4b79a1; /* Borde con el mismo tono de las flip cards */
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.search-input::placeholder {
+  color: #999; /* Color del placeholder */
+}
+
+.search-input:focus {
+  border-color: #ffdd57; /* Cambio de color en el foco */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada en el foco */
+}
+
+.search-button {
+  background: linear-gradient(135deg, #4b79a1, #283e51); /* Gradiente en tonos azul oscuro */
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 25px;
+  border-radius: 50px; /* Bordes redondeados */
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.search-button:hover {
+  background: linear-gradient(135deg, #ffdd57, #f0c14b); /* Gradiente amarillo suave */
+  color: #333;
+  transform: scale(1.05); /* Zoom suave al pasar el cursor */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa en hover */
+}

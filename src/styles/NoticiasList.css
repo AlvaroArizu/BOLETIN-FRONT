@@ -1,0 +1,237 @@
+/* NoticiasList.css */
+
+/* Contenedor principal */
+.container1 {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Título de la lista de noticias */
+  h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #283e51;
+    background: linear-gradient(135deg, #ffdd57, #4b79a1); /* Gradiente llamativo */
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  /* Tarjetas de noticias */
+  .card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Efecto de elevar la tarjeta al hover */
+  }
+  
+  .card-img-top {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    object-fit: cover;
+    height: 200px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover .card-img-top {
+    transform: scale(1.05); /* Efecto zoom suave al hover */
+  }
+  
+  /* Título de la noticia */
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Descripción */
+  .card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  /* Botón de eliminar */
+  .btn-danger {
+    background-color: #ff6b6b;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: white;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 5px 15px rgba(255, 107, 107, 0.3); /* Sombra para darle un efecto 3D */
+  }
+  
+  .btn-danger:hover {
+    background-color: #ff4e4e;
+    transform: scale(1.05); /* Botón más grande al hacer hover */
+  }
+  
+  .btn-danger:active {
+    background-color: #ff2a2a;
+    transform: scale(0.95); /* Efecto de clic */
+  }
+  
+  /* Estilo de los textos pequeños */
+  small {
+    color: #999;
+  }
+  
+
+  /* Estilo para el buscador */
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 600px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 2px solid #ccc;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #4b79a1;
+  outline: none;
+}
+
+.search-result-count {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Tarjetas de noticias */
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02); /* Efecto de zoom al pasar el cursor */
+}
+
+/* Formulario de edición */
+.edit-form {
+  background-color: #f4f7fa; /* Fondo más claro y elegante */
+  border-radius: 15px; /* Bordes más suaves */
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15); /* Sombra suave y profunda */
+  padding: 40px; /* Más espacio alrededor del formulario */
+  max-width: 700px; /* Un poco más amplio */
+  margin: auto;
+  margin-bottom: 50px; /* Espacio extra debajo */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edit-form:hover {
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el cursor */
+  transform: translateY(-5px); /* Efecto de elevación suave */
+}
+
+/* Título con gradiente llamativo */
+.edit-form h3 {
+  font-size: 2.5rem; /* Título más grande */
+  font-weight: bold;
+  background: linear-gradient(135deg, #ffdd57, #4b79a1);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase; /* Texto en mayúsculas para destacar más */
+  letter-spacing: 2px; /* Más espacio entre letras */
+}
+
+/* Estilo mejorado para los inputs */
+.form-control {
+  border-radius: 12px; /* Bordes más suaves */
+  font-size: 1.2rem;
+  padding: 15px;
+  border: 2px solid #ccc;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.05); /* Sombra suave */
+}
+
+.form-control:focus {
+  border-color: #4b79a1;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más intensa al hacer foco */
+}
+
+/* Espaciado adicional entre los campos */
+.form-group {
+  margin-bottom: 25px;
+}
+
+/* Botón verde de éxito */
+.btn-success {
+  background-color: #28a745;
+  border: none;
+  border-radius: 50px; /* Botones más redondeados */
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 8px 15px rgba(40, 167, 69, 0.4); /* Sombra más pronunciada */
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  transform: translateY(-3px); /* Eleva el botón ligeramente al hacer hover */
+}
+
+.btn-success:active {
+  background-color: #1e7e34;
+  transform: translateY(2px); /* Simula un clic real */
+}
+
+/* Botón gris para cancelar */
+.btn-secondary {
+  background-color: #6c757d;
+  border: none;
+  border-radius: 50px; /* Bordes redondeados */
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 8px 15px rgba(108, 117, 125, 0.4); /* Sombra más pronunciada */
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  transform: translateY(-3px);
+}
+
+.btn-secondary:active {
+  background-color: #545b62;
+  transform: translateY(2px); /* Simula el clic */
+}
+
+/* Estilo adicional para el input de archivo */
+input[type="file"] {
+  border: 2px dashed #ccc;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+input[type="file"]:hover {
+  border-color: #4b79a1;
+}
+
+/* Mejor espaciado entre botones */
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}

@@ -1,0 +1,91 @@
+/* Estilos generales del formulario */
+.form-container {
+    background-color: #f8f9fa; /* Fondo claro y limpio */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 30px;
+  }
+  
+  /* Título del formulario */
+  .form-container h3 {
+    color: #283e51; /* Color principal */
+    background: linear-gradient(135deg, #ffdd57, #4b79a1); /* Gradiente llamativo */
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .form-container h3::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #4b79a1;
+    margin: 10px auto;
+    border-radius: 2px;
+  }
+  
+  /* Estilos de campos de formulario */
+  .form-control {
+    border-radius: 12px;
+    font-size: 1.1rem;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #4b79a1; /* Color de enfoque */
+    box-shadow: 0 0 5px rgba(75, 121, 161, 0.4); /* Sombra al hacer focus */
+  }
+  
+  /* Estilo para checkbox */
+  .form-check-input {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .form-check-label {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* Botón de enviar */
+  .btn-lg {
+    background-color: #4b79a1; /* Fondo primario */
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px; /* Botón redondeado */
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-lg:hover {
+    background-color: #ffdd57;
+    color: #283e51;
+    transform: scale(1.05); /* Ligeramente más grande al hacer hover */
+  }
+  
+  /* Mensaje de texto pequeño */
+  .form-text {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: 5px;
+    display: block;
+  }
+  
+  /* Estilo para la parte de imagen */
+  .form-label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+  }
+
+  
+  
