@@ -19,14 +19,14 @@ const NoticiasDescription = () => {
         const noticias = response.data;
 
         // Buscar la noticia por ID
-        const foundNoticia = noticias.find((n) => n.id === parseInt(id)); // Asegúrate de que 'id' sea un número
+        const foundNoticia = noticias.find((n) => n.id === id); // Comparar como cadena
         if (foundNoticia) {
           setNoticia(foundNoticia);
         } else {
           setError('No se encontró la noticia.');
         }
       } catch (error) {
-        setError('Hubo un error al cargar la noticia.');
+        setError(`Hubo un error al cargar la noticia: ${error.message}`);
       } finally {
         setLoading(false);
       }
@@ -62,7 +62,7 @@ const NoticiasDescription = () => {
         {noticia.imagen && (
           <div className="text-center mb-4">
             <img
-              src={noticia.imagen} // Suponiendo que la imagen está en la misma ruta que el JSON
+              src={noticia.imagen} // Usa la URL directamente desde el JSON
               alt="Imagen de la noticia"
               className="img-fluid rounded shadow noticia-img"
             />
@@ -91,6 +91,7 @@ const NoticiasDescription = () => {
 };
 
 export default NoticiasDescription;
+
 
 
 
